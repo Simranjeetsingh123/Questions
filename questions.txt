@@ -1,0 +1,295 @@
+Write A program to accept  Four digit number from user and count zero , odd and even digits from the entered number.
+
+Ans. package prep;
+
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Twodarray {
+	 public static void main(String args[]) throws IOException {
+		 Scanner sc = new Scanner(System.in);
+		 int b = sc.nextInt();
+		
+		 int marks[] = new int[b];
+		 
+		
+		
+		int count=0;
+		int even=0;
+		int odd=0;
+		 for( int num: marks) {
+			if(num==0) {
+				count=count+num;
+			}
+			
+			if(num/2==0) {
+				even=even+num;
+			}
+		if(num/3==0) {
+			odd=odd+num;
+		}
+		System.out.print(count);
+		System.out.print(even);
+		System.out.print(odd);
+		 }
+		
+		 
+		 
+}
+}
+
+q.2 Write a   program to accept ‘n’ numbers from user , store these numbers into an array. Find out maximum and minimum number from an Array.
+           package prep;
+import java.util.*;
+  import java.io.*;
+  
+  public class Practice {
+    public static void main(String args[]) throws IOException {
+      
+      //write your code here
+    	
+    	int t=2;
+		while(t!=0) {
+    	 Scanner sc = new Scanner(System.in);
+          int b1=sc.nextInt();
+          int Arr1[] = new int[b1];
+         
+         
+           
+          
+           for(int i=0;i<Arr1.length;i++){ 
+        	   Arr1[i] = sc.nextInt();
+            
+           }
+           int min = Arr1[0];
+           int max=Arr1[0];
+           for (int i=1;i<Arr1.length;i++) {
+         // System.out.print( minValue);
+        
+        	   if(min > Arr1[i])
+               {
+                   min = Arr1[i];
+               }
+         
+        	   
+        	   if(max < Arr1[i])
+               {
+                   min = Arr1[i];
+               }
+        	  
+       
+         }
+        
+          
+           System.out.println(min+ " " + max); 
+           System.out.print("\n");
+  
+           t--;	
+         
+                
+    }
+		
+    }
+   
+  }  
+  		 
+           
+              
+  
+q. 3 Write a menu driven program  that shows the working of a library. The menu option should be 
+--ADD BOOK INFORMATION
+--DISPLAY BOOK INFORMATION
+--LIST ALL BOOKS OF GIVEN AUTHOR 
+--LIST THE COUNT OF BOOKS IN THE LIBRARY
+--EXIT
+
+Ans.  package prep;
+import java.util.*;
+  import java.io.*;
+  
+  public class Practice {
+    public static void main(String args[]) throws IOException {
+      
+      //write your code here
+    	
+    	
+    	 Scanner sc = new Scanner(System.in);
+          
+          String Arr1[] = new String[5];
+         
+         
+           
+          
+           for(int i=0;i<Arr1.length;i++){ 
+        	   Arr1[i] = sc.nextLine();
+           }
+          System.out.print(Arr1);
+        }
+}
+
+
+
+q.4 Write a  program to accept ‘n’ numbers from user , store these numbers into an array and sort the numbers of an array using function.
+Ans. package prep;
+import java.util.*;
+  import java.io.*;
+  
+  public class Practice {
+    public static void main(String args[]) throws IOException {
+      
+      //write your code here
+    	
+    	int t=2;
+		while(t!=0) {
+    	 Scanner sc = new Scanner(System.in);
+          int b1=sc.nextInt();
+          int Arr1[] = new int[b1];
+         
+         
+           
+          
+           for(int i=0;i<Arr1.length;i++){ 
+        	   Arr1[i] = sc.nextInt();
+            
+           }
+          
+           
+           for (int i=1;i<Arr1.length;i++) {
+         // System.out.print( minValue);
+        int s =Arr1[-1];
+        System.out.print(s);
+           }
+                  
+    }
+		
+    }
+   
+  }    
+Answer2:
+public class MinNMax { 
+public static void main(String[] args) 
+    { 
+  
+        // Initializing array of integers 
+        Integer[] num = { 2, 4, 7, 5, 9 }; 
+  
+        // using Collections.min() to find minimum element 
+        // using only 1 line. 
+        int min = Collections.min(Arrays.asList(num)); 
+  
+        // using Collections.max() to find maximum element 
+        // using only 1 line. 
+        int max = Collections.max(Arrays.asList(num)); 
+  
+        // printing minimum and maximum numbers 
+        System.out.println("Minimum number of array is : " + min); 
+        System.out.println("Maximum number of array is : " + max); 
+    } 
+}
+
+Answer12: 
+public class StringFormatter {  
+public static String reverseWord(String str){  
+    String words[]=str.split("\\s");  
+    String reverseWord="";  
+    for(String w:words){  
+        StringBuilder sb=new StringBuilder(w);  
+        sb.reverse();  
+        reverseWord+=sb.toString()+" ";  
+    }  
+    return reverseWord.trim();  
+}  
+}  
+public class TestStringFormatter {  
+public static void main(String[] args) {  
+    System.out.println(StringFormatter.reverseWord("my name is Simranjeet"));  
+    System.out.println(StringFormatter.reverseWord("I am Simranjeet"));    
+    }  
+}
+
+Answer13:
+public class SumofRowColumn  
+{  
+    public static void main(String[] args) {  
+        int rows, cols, sumRow, sumCol;  
+          
+        //Initialize matrix a  
+        int a[][] = {     
+                        {1, 2, 3},  
+                        {4, 5, 6},  
+                        {7, 8, 9}  
+                    };  
+            
+          //Calculates number of rows and columns present in given matrix  
+          rows = a.length;  
+        cols = a[0].length;  
+          
+        //Calculates sum of each row of given matrix  
+        for(int i = 0; i < rows; i++){  
+            sumRow = 0;  
+            for(int j = 0; j < cols; j++){  
+              sumRow = sumRow + a[i][j];  
+            }  
+            System.out.println("Sum of " + (i+1) +" row: " + sumRow);  
+        }  
+          
+        //Calculates sum of each column of given matrix  
+        for(int i = 0; i < cols; i++){  
+            sumCol = 0;  
+            for(int j = 0; j < rows; j++){  
+              sumCol = sumCol + a[j][i];  
+            }  
+            System.out.println("Sum of " + (i+1) +" column: " + sumCol);  
+        }  
+    }  
+}
+
+Answer 24:
+
+import java.util.Scanner;
+ 
+public class test {
+ 
+ public static void main(String[] args) {
+  Scanner in = new Scanner(System.in);
+   
+  System.out.print("Input a number: ");
+  int num1 = in.nextInt();
+   
+  for (int i=0; i< 10; i++){
+   System.out.println(num1 + " x " + (i+1) + " = " + 
+     (num1 * (i+1)));
+  }
+ }
+}
+
+Answer7:
+
+import java.io.*; 
+
+class test { 
+	
+
+	static int getSum(int n) 
+	{	 
+		int sum = 0; 
+		
+		while (n != 0) 
+		{ 
+			sum = sum + n % 10; 
+			n = n/10; 
+		} 
+	
+	return sum; 
+	} 
+
+	
+	public static void main(String[] args) 
+	{ 
+		int n = 687; 
+
+		System.out.println(getSum(n)); 
+	} 
+} 
+
+
